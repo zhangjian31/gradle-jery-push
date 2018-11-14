@@ -6,8 +6,8 @@ gradle-jery-push
 ### 提供了简单的仓库工具
 ```properties
     local.gradle 本地仓库
-    upload.gradle 上传到jcenter
-    upload_android.gradle android 上传到jcenter
+    java_install_upload.gradle 上传到jcenter
+    android_install_upload.gradle android 上传到jcenter
 ```
 
 ## 二、local.gradle 本地仓库的使用
@@ -28,21 +28,27 @@ gradle-jery-push
     $ gradle uploadArchives
 ```
 
-## 三、upload.gradle 上传远程仓库的使用
+## 三、java_install_upload.gradle 上传远程仓库的使用
 ### 1. 在你的 `build.gradle` 中增加以下设置：
 ```groovy
     classpath 'com.jfrog.bintray.gradle:gradle-bintray-plugin:1.6'
     classpath 'com.github.dcendents:android-maven-gradle-plugin:1.5'
 ```
 ```groovy
-    apply from: 'https://raw.github.com/zhangjian31/gradle-jery-push/master/upload.gradle'
+    apply from: 'https://raw.github.com/zhangjian31/gradle-jery-push/master/java_install_upload.gradle'
 ```
 
 ### 2. 在你的gradle.properties增加以下设置
 ```properties
-    GROUP_ID=xxx.xxx.xxx
-    ARTIFACT_ID=xxx
-    VERSION=xxx
+    PROJ_SITE_URL=xxx
+    PROJ_GIT_URL=xxx
+    PROJ_NAME=xxx
+    PROJ_DESCRIPTION=xxx
+    DEVELOPER_ID=xxx
+    DEVELOPER_NAME=xxx
+    DEVELOPER_EMAIL=xxx
+    GROUP_ID=xxx
+    VERSION=x.x.x
 ```
 
 ### 3. 在local.properties中配置bintray帐号信息
