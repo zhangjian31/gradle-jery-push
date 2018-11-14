@@ -23,7 +23,12 @@ gradle-jery-push
 ```groovy
     apply plugin: 'java'
     apply from: 'https://raw.github.com/zhangjian31/gradle-jery-push/master/local.gradle'
-    
+```
+```groovy
+    classpath 'com.jfrog.bintray.gradle:gradle-bintray-plugin:1.6'
+    classpath 'com.github.dcendents:android-maven-gradle-plugin:1.5'
+```
+```groovy
     tasks.withType(GroovyCompile) {
         sourceCompatibility = '1.7'
         targetCompatibility = '1.7'
