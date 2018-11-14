@@ -2,6 +2,7 @@ apply plugin: 'maven'
 
 uploadArchives {
     repositories {
+        mavenDeployer {
             pom.groupId = GROUP_ID
             pom.version = VERSION
             repository(url: uri('./repo'))
