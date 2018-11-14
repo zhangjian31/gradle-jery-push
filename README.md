@@ -1,22 +1,36 @@
 gradle-jery-push
 ===============
 
-## Usage
+# Usage
 
-### 1. 介绍
+## 一. 介绍
+
 提供了简单的仓库工具
+    local.gradle 本地仓库
+    upload.gradle 上传到jcenter
+    upload_android.gradle android 上传到jcenter
 
-    local.gradle
-    upload.gradle
-    upload_android.gradle
-
-### 2. 在你的gradle.properties增加以下设置
+##二、local.gradle 本地仓库的使用
+### 1. 在你的gradle.properties增加以下设置
 设置gradle.properties
 
 ```properties
     GROUP_ID=xxx.xxx.xxx
     ARTIFACT_ID=xxx
     VERSION=xxx
+```
+##三、upload.gradle 上传远程仓库的使用
+### 1. 在你的gradle.properties增加以下设置
+```properties
+    GROUP_ID=xxx.xxx.xxx
+    ARTIFACT_ID=xxx
+    VERSION=xxx
+```
+
+### 2. 在local.properties中增加以下设置
+```properties
+    bintray.apikey=xxxxx
+    bintray.user=xxxx
 ```
 
 ### 3. 在local.properties中增加以下设置
@@ -25,28 +39,29 @@ gradle-jery-push
     bintray.user=xxxx
 ```
 
-The `VERSION_NAME` value is important. 
-
 ### 4. 在.gitignore中记得忽略local.properties，不然你的apikey都泄露了
-
 ```properties
     /local.properties
 ```
 
-### 5. 调用 upload.gradle
-
-在你的 `build.gradle` 中增加以下设置：
-
+### 5. 在你的 `build.gradle` 中增加以下设置：
 ```groovy
-    https://raw.github.com/zhangjian31/gradle-jery-push/master/upload.gradle
+    apply from: 'https://raw.github.com/zhangjian31/gradle-jery-push/master/upload.gradle'
 ```
 
 ### 6. 发布
-
 ```
     $ gradle install
     $ gradle bintrayUpload
 ```
+
+##四、upload_android.gradle 上传远程仓库的使用
+
+
+
+
+
+
 
 ## License
 
