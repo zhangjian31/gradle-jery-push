@@ -3,10 +3,12 @@ gradle-jery-push
 
 ## 一. 介绍
 
-提供了简单的仓库工具
+### 提供了简单的仓库工具
+```properties
     local.gradle 本地仓库
     upload.gradle 上传到jcenter
     upload_android.gradle android 上传到jcenter
+```
 
 ## 二、local.gradle 本地仓库的使用
 
