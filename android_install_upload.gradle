@@ -4,13 +4,15 @@ apply plugin: 'com.jfrog.bintray'
 
 group = GROUP_ID
 version = VERSION
-artifactId = ARTIFACTID
 
 install {
     repositories.mavenInstaller {
         pom {
             project {
                 packaging 'aar'
+                groupId GROUP_ID
+                artifactId ARTIFACTID
+
                 description PROJ_DESCRIPTION
                 name PROJ_NAME
                 url PROJ_SITE_URL
