@@ -16,12 +16,17 @@ gradle-jery-push
 设置gradle.properties
 ```properties
     GROUP_ID=xxx.xxx.xxx
-    ARTIFACT_ID=xxx
     VERSION=xxx
 ```
 ### 2. 在你的 `build.gradle` 中增加以下设置：
+
 ```groovy
     apply from: 'https://raw.github.com/zhangjian31/gradle-jery-push/master/local.gradle'
+    
+    tasks.withType(GroovyCompile) {
+        sourceCompatibility = '1.7'
+        targetCompatibility = '1.7'
+    }
 ```
 ### 3. 发布到本地
 ```
