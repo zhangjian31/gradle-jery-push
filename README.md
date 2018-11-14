@@ -1,8 +1,6 @@
 gradle-jery-push
 ===============
 
-# Usage
-
 ## 一. 介绍
 
 提供了简单的仓库工具
@@ -14,11 +12,18 @@ gradle-jery-push
 
 ### 1. 在你的gradle.properties增加以下设置
 设置gradle.properties
-
 ```properties
     GROUP_ID=xxx.xxx.xxx
     ARTIFACT_ID=xxx
     VERSION=xxx
+```
+### 2. 在你的 `build.gradle` 中增加以下设置：
+```groovy
+    apply from: 'https://raw.github.com/zhangjian31/gradle-jery-push/master/upload.gradle'
+```
+### 3. 发布到本地
+```
+    $ gradle uploadArchives
 ```
 
 ## 三、upload.gradle 上传远程仓库的使用
