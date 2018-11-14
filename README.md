@@ -21,7 +21,7 @@ gradle-jery-push
 ```
 ### 2. 在你的 `build.gradle` 中增加以下设置：
 ```groovy
-    apply from: 'https://raw.github.com/zhangjian31/gradle-jery-push/master/upload.gradle'
+    apply from: 'https://raw.github.com/zhangjian31/gradle-jery-push/master/local.gradle'
 ```
 ### 3. 发布到本地
 ```
