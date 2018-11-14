@@ -5,6 +5,7 @@ gradle-jery-push
 
 ### 1. 介绍
 提供了简单的仓库工具
+
     local.gradle
     upload.gradle
     upload_android.gradle
@@ -37,7 +38,7 @@ The `VERSION_NAME` value is important.
 在你的 `build.gradle` 中增加以下设置：
 
 ```groovy
-    https://raw.github.com/zhangjian31/android-gradle-output-plugin/master/upload.gradle
+    https://raw.github.com/zhangjian31/gradle-jery-push/master/upload.gradle
 ```
 
 ### 6. 发布
