@@ -10,7 +10,8 @@ gradle-jery-push
     upload.gradle 上传到jcenter
     upload_android.gradle android 上传到jcenter
 
-##二、local.gradle 本地仓库的使用
+## 二、local.gradle 本地仓库的使用
+
 ### 1. 在你的gradle.properties增加以下设置
 设置gradle.properties
 
@@ -19,7 +20,9 @@ gradle-jery-push
     ARTIFACT_ID=xxx
     VERSION=xxx
 ```
-##三、upload.gradle 上传远程仓库的使用
+
+## 三、upload.gradle 上传远程仓库的使用
+
 ### 1. 在你的gradle.properties增加以下设置
 ```properties
     GROUP_ID=xxx.xxx.xxx
@@ -55,13 +58,7 @@ gradle-jery-push
     $ gradle bintrayUpload
 ```
 
-##四、upload_android.gradle 上传远程仓库的使用
-
-
-
-
-
-
+## 四、upload_android.gradle 上传远程仓库的使用
 
 ## License
 
